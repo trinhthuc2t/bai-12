@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let number1 = [9,2,11,15];
+    let number2 = [11,3,7,9];
+    // in ra các số có trong mảng number1 nhưng k có trong mảng number2
+   /* for (let i=0;i<number1.length;i++){
+        let ind=-1;
+        ind=number2.indexOf(number1[i]);
+        if (ind<0){
+            console.log(number1[i]);
+        }
+    }*/
+
+   // cách 2:
+
+    for (let i = 0; i < number1.length; i++) {
+        for (let j=0; j < number2.length; j++) {
+            let chek = false;
+            if (a[i]==b[j]){
+                chek = true
+            }
+        }
+        if (chek = false){
+            document.write(number1)
+        }
+
+    }
+
+
+
+    // in ra các số có trong mảng number1 và có trong mảng number2
+    /*for (let i=0;i<number1.length;i++){
+        let ind=-1;
+        ind=number2.indexOf(number1[i]);
+        if (ind>-1){
+            console.log(number1[i]);
+        }
+    }
+
+*/
+
+
+
+    let a = [9,2,11,15]
+    let b = [11,3,7,9]
+    /*for (let i = 0; i < a.length; i++) {
+      let chek = false;
+      for (let j = 0; j < b.length; i++) {
+        if (a[i] === b[j]){
+          chek =true;
+          break;
+        }
+
+      } if (!chek) console.log(a[i]);
+    }*/
+
+    // for of
+    /*
+    for (let itemA of a) {
+      let  check = false;
+      for (let itemB of b){
+        if (itemA === itemB) {
+          check = true;
+          break;
+        }
+      }
+      if (!check) console.log(itemA);
+    }
+    */
+
+
+    //
+    for (let itemA of a) {
+
+        if (!b.includes(itemA)) console.log(itemA);
+
+    }
+
+    //
+    for (let itemA of a) {
+        if (b.indexOf(itemA)== -1) console.log(itemA);
+    }
+
+    // arrow function
+    a.filter(item => !b.includes(item)).forEach(i =>console.log(i));
+
+
+
+    //
+
+</script>
+</body>
+</html>
